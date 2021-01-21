@@ -1,7 +1,7 @@
 {
   "name": "produce-gsc-un",
   "version": "1.0.0",
-  "description": "code for data conversion,
+  "description": "code for data conversion",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
