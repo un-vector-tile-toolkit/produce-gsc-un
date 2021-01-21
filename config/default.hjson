@@ -1,0 +1,52 @@
+{
+  host: localhost
+  unixUser: test\abcd
+  wtpsThreshold: 50
+  monitorPeriod: 10
+  Z: 5
+  concurrent: 4
+  maxRetries: 5
+  retryDelay: 5000
+  port: 5433
+  dbUser: postgress
+  dbPassword: ABCDEFG
+  relations: [
+    un_base::custom_ne_rivers_lakecentrelines
+    un_base::custom_planet_land_a
+    un_base::custom_planet_land_a_l08
+    un_base::custom_unmap_0_bnda_a1_p
+    un_base::custom_unmap_0_bnda_a2_p
+    un_base::custom_unmap_0_bndl
+    un_base::un_global_places
+    un_base::un_global_pois
+    un_base::un_minusca_pois
+    un_base::un_mission_lc_ls
+    un_base::un_glc30_global_lc_ms
+    un_base::un_unmik_bnda_a_p
+    un_base::un_unmik_bnda_a3_p
+    un_base::un_unmik_bndl
+    un_base::un_unvmc_igac_bnda_a1_departments_p
+    un_base::un_unvmc_igac_bnda_a2_municipalities_p
+    un_base::un_unvmc_igac_bnda_a3_rural_units_p
+    un_base::un_unvmc_igac_bndl
+    un_base::unhq_bnda_a1_p
+    un_base::unhq_bnda_a2_p
+    un_base::unhq_bnda_cty_anno_l06
+    un_base::unhq_bnda05_cty
+    un_base::unhq_bndl
+    un_base::unhq_phyp
+    un_base::unhq_popp
+   ]
+  defaultDate: 2021-01-01
+  mbtilesDir: /data/mbtiles/un
+  propertyBlacklist: [
+    description
+    fid
+    fid_1
+    globalid
+    id
+    pseudoarea
+  ]
+  spinnerString: 18
+  fetchSize: 100
+}
