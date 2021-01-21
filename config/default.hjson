@@ -38,7 +38,7 @@
     un_base::unhq_popp
    ]
   defaultDate: 2021-01-01
-  mbtilesDir: /data/mbtiles/un
+  mbtilesDir: tile/un-l
   propertyBlacklist: [
     description
     fid
