@@ -326,13 +326,27 @@ const lut = {
     f.properties._source = 'un_global_places'
     return f
   },
+  unhq_cm02_phyp_anno_l06: f => {
+    f.tippecanoe = {
+      layer: 'lab_water_m',
+      minzoom: 5,
+      maxzoom: 5
+    }
+    return f
+  },
   unhq_phyp: f => {
     f.tippecanoe = {
       layer: 'label',
       minzoom: 5,
       maxzoom: 15
     }
-    f.properties._source = 'unhq_phyp'
+//edit 2021-01-27 starts
+f.properties.display = 0
+if (f.properties.type_code == 4 && !/Sea|Ocean|Gulf/.test(f.properties.name) ){
+f.properties.display = 1
+}
+//edit 2021-01-27 ends
+
     return f
   },
   un_minusca_pois: f => {

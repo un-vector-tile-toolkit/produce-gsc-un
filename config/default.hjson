@@ -36,6 +36,7 @@
     un_base::unhq_bndl
     un_base::unhq_phyp
     un_base::unhq_popp
+    un_base::unhq_cm02_phyp_anno_l06
    ]
   defaultDate: 2021-01-01
   mbtilesDir: tile/un-l
