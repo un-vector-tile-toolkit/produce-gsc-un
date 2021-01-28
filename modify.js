@@ -222,7 +222,7 @@ const lut = {
   un_unmik_bnda_a3_p: f => {
     f.tippecanoe = {
       layer: 'mik_bnd_lab3',
-      minzoom: 9,
+      minzoom: 8,
       maxzoom: 15
     }
     return f
