@@ -330,7 +330,7 @@ const lut = {
     f.tippecanoe = {
       layer: 'lab_water_m',
       minzoom: 5,
-      maxzoom: 5
+      maxzoom: 10
     }
     return f
   },
