@@ -16,12 +16,12 @@ const preProcess = (f) => {
     let name = ''
     if (f.properties['en_name']) {
       name = f.properties['en_name']
-    } else if (f.properties['ar_name']) {
-      name = f.properties['ar_name']
     } else if (f.properties['int_name']) {
       name = f.properties['int_name']
-    } else {
+    } else if (f.properties['name']) {
       name = f.properties['name']
+    } else {
+      name = f.properties['ar_name']
     }
     delete f.properties['en_name']
     delete f.properties['ar_name']
