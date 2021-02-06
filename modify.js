@@ -352,16 +352,135 @@ f.properties.display = 1
   un_minusca_pois: f => {
     f.tippecanoe = {
       layer: 'poi_minusca',
-      minzoom: 7,
       maxzoom: 15
+    }
+    switch (f.properties.feat_class) {
+      //Large airport
+      case 'Airport':
+         f.tippecanoe.minzoom = 7
+        break
+      //public
+      case 'NGO':
+      case 'Police':
+      case 'Embassy':
+      case 'Consulate':
+      case 'Local Authority':
+      case 'International Organisation':
+      case 'Public Place':
+      case 'National Institution':
+      case 'Regional Organisation':
+      case 'Library':
+      case 'Youth Centre':
+      case 'Social Centre':
+      case 'Military Camp':
+         f.tippecanoe.minzoom = 11
+        break
+      //transport1
+      case 'Boat Ramp':
+         f.tippecanoe.minzoom = 12
+        break
+      //service1
+      case 'Hospital':
+      case 'Health Centre':
+      case 'University & College':
+      case 'Kindergarten':
+      case 'Primary School':
+      case 'Secondary School':
+      case 'Hotel':
+         f.tippecanoe.minzoom = 13
+        break
+      //worship
+      case 'Church':
+      case 'Mosque':
+         f.tippecanoe.minzoom = 13
+        break
+      //traffic
+      case 'Fuel Station':
+         f.tippecanoe.minzoom = 14
+        break
+/*
+      //service2
+      case 'Club':
+      case 'Restaurant':
+         f.tippecanoe.minzoom = 15
+        break
+      //heritage
+      case 'Cemetery':
+      case 'Landmark':
+         f.tippecanoe.minzoom = 15
+        break
+      //other
+      case 'Market':
+      case 'Super Market':	
+      case 'Bank':
+      case 'RadioTower':
+      case 'Telecommunication':
+      case 'Stadium':
+      case 'Zoo':
+         f.tippecanoe.minzoom = 15
+        break
+*/
+     default:
+        f.tippecanoe.minzoom = 15
     }
     return f
   },
   un_global_pois: f => {
     f.tippecanoe = {
       layer: 'un_poi',
-      minzoom: 7,
       maxzoom: 15
+    }
+    switch (f.properties.type) {
+      //Large airport
+      case 'Airport':
+         f.tippecanoe.minzoom = 7
+        break
+      //transport1(big)
+      case 'Airfield':
+      case 'Helipad':
+         f.tippecanoe.minzoom = 10
+        break
+      //public
+      case 'NGO':
+      case 'UN':
+      case 'Post Office':
+      case 'Fire Station':
+      case 'Prison':
+      case 'Police Station':
+      case 'Courthouse':
+      case 'Embassy':
+      case 'Town Hall':
+      case 'Other Public Building':
+      case 'Military':
+         f.tippecanoe.minzoom = 11
+        break
+      //transport1(small)
+      case 'Taxi Station':
+      case 'Ferry Terminal':
+      case 'Port':
+      case 'Bus Station':
+      case 'Railway Station':
+         f.tippecanoe.minzoom = 12
+        break
+      //service1
+      case 'Hospital':
+      case 'University':
+      case 'College':
+      case 'School':
+      case 'Hotel':
+         f.tippecanoe.minzoom = 13
+        break
+      //worship
+      case 'Christian':
+      case 'Muslim':
+         f.tippecanoe.minzoom = 13
+        break
+      //traffic
+      case 'Fuel':
+         f.tippecanoe.minzoom = 14
+        break
+     default:
+        f.tippecanoe.minzoom = 15
     }
     return f
   }
